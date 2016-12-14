@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <!-- <script src="../../dist/Chart.bundle.js"></script>
+
+<head>
+    <!-- <script src="../../dist/Chart.bundle.js"></script>
     <script src="../utils.js"></script> -->
     <script type="text/javascript" href="public/js/scripts.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/d3-ease.v1.min.js"></script>
-
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="public/css/materialize.min.css" media="screen,projection" />
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <style>
     canvas {
         -moz-user-select: none;
@@ -14,52 +21,39 @@
         -ms-user-select: none;
     }
     </style>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+</head>
 
-  </head>
-  <body>
-  <div id="container">
-  <div id="circle1"><p>"I raise up my voice—not so I can shout, but so that those without a voice can be heard...we cannot succeed when half of us are held back."
-  <br> ―Malala Yousafzai
-</p></div>
-  <div id="circle2">quote2</div>
-  <div id="circle3">quote3</div>
-  </div>
-
-<script>
-d3.select("body").transition().duration(10000).style("background-color", "black");
-
-</script>
-
+<body>
+    <div id="container">
+        <div id="circle1">
+            <p>"I raise up my voice—not so I can shout, but so that those without a voice can be heard...we cannot succeed when half of us are held back."
+                <br> ―Malala Yousafzai
+            </p>
+        </div>
+        <div id="circle2">quote2</div>
+        <div id="circle3">quote3</div>
+    </div>
+    <script>
+    d3.select("body").transition().duration(10000).style("background-color", "black");
+    </script>
     <div id="map"></div>
     <script>
-      var map;
-      function initMap() {
+    var map;
+
+    function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 2,
-          center: new google.maps.LatLng(4.9,-350.3),
-          mapTypeId: 'terrain'
+            center: {
+                lat: 4.9,
+                lng: -350.3
+            },
+            zoom: 2
         });
-
-        // Create a <script> tag and set the USGS URL as the source.
-        var script = document.createElement('script');
-
-        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-
-
-      }
-
-
-
-
-      // Loop through the results array and place a marker for each
-      // set of coordinates.
-      //
+    }
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAW57cn6HT3vFHOdyGPTeFSy-DGnCMGHQ&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAW57cn6HT3vFHOdyGPTeFSy-DGnCMGHQ&callback=initMap">
     </script>
-  </body>
+</body>
+
 </html>
