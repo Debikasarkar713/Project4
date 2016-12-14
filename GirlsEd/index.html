@@ -35,39 +35,14 @@ d3.select("body").transition().duration(10000).style("background-color", "black"
     <div id="map"></div>
     <script>
 
-
-      var locations = [
-  ['loan 1', 4.9,-350.3, 'address 1'],
-  ['loan 2', 4.9,-350.3, 'address 2'],
-  ['loan 3', 4.9,-350.3, 'debika rocks'],
-  ['loan 4', 33.80010128657071, 151.28747820854187, 'address 4'],
-  ['loan 5', 33.950198, 151.259302, 'address 5']
-  ];
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 2,
-          center: new google.maps.LatLng(4.9,-350.3),
-          mapTypeId: 'terrain'
+          center: {lat: 4.9, lng: -350.3},
+          zoom: 2
         });
-
-        setMarkers(map,locations)
-
-        // Create a <script> tag and set the USGS URL as the source.
-        var script = document.createElement('script');
-
-        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-
-
       }
 
-
-
-
-      // Loop through the results array and place a marker for each
-      // set of coordinates.
-      //
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAW57cn6HT3vFHOdyGPTeFSy-DGnCMGHQ&callback=initMap">
