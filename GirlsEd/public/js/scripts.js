@@ -1,1 +1,9 @@
-// center: new google.maps.LatLng(4.9,-350.3),
+$(document).ready(function(){
+      $('.carousel').carousel({
+            dist:0,
+            shift:0,
+            padding:20,
+
+      });
+
+    });
