@@ -1,9 +1,6 @@
-$(document).ready(function(){
-      $('.carousel').carousel({
-            dist:0,
-            shift:0,
-            padding:20,
 
-      });
 
-    });
+ $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
