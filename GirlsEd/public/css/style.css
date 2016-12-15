@@ -1,6 +1,14 @@
 body{
-  background-color: white;
+  background-color: #616161;
 }
+
+
+h1{
+color: white;
+text-shadow: 2px;
+font-family:
+}
+
 #map {
 margin: 50px 60px 50px 250px;
 height: 600px;
