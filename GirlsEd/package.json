@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+  "heroku-prebuild": "bash ./scripts/deployment_react.sh",
+  "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh",
+  "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,4 +18,5 @@
     "path": "^0.12.7",
     "watch": "^1.0.1"
   }
+
 }
