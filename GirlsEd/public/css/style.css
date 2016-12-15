@@ -62,3 +62,7 @@ width:1100px;
 .legend-items text {
     cursor: default;
 }
+
+footer{
+  margin-top: 10px;
+}
