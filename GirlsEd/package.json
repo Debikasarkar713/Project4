@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-  "heroku-prebuild": "bash ./scripts/deployment_react.sh",
-  "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh",
-  "start": "node index.js"
+    "heroku-prebuild": "bash ./scripts/deployment_react.sh",
+    "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "chart.js": "^2.4.0",
     "moment": "^2.17.1",
     "node": "0.0.0",
     "path": "^0.12.7",
     "watch": "^1.0.1"
   }
-
 }
