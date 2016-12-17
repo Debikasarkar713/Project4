@@ -18,3 +18,6 @@ $(document).ready(function(){
        // Callback for Modal close
     });
   });
+
+
+$('#access').animateCss('bounce');
